@@ -1,0 +1,42 @@
+<div class="ba-card-wrapper" [ngClass]="pageView ? 'ba-cards-side' : 'ba-cards-top'">
+
+  <div *ngFor="let a of accounts;" class="ba-card-item" (click)="onSelect(a)" [class.selected]="a === selectedAccount">
+
+    <div class="ba-card-header">
+      {{a.title}}
+    </div>
+
+    <div class="ba-card-content">
+
+      <ng-template [ngIf]="pageView">
+        <div class="acc-number">{{a.account_number}}</div>
+      </ng-template>
+      <ng-template [ngIf]="!pageView">
+        <div class="acc-number">{{a.account_number}}</div>
+        <div class="acc-ballance">
+          <app-styled-currency [currency]="a.currency" [value]="a.ballance">
+          </app-styled-currency>
+        </div>
+      </ng-template>
+
+    </div>
+
+    <div class="ba-card-footer">
+      <ng-template [ngIf]="pageView">
+        <div class="ba-card-left"><span class="mdi mdi-credit-card-outline"></span>{{a.cards.length}}</div>
+        <div class="ba-card-right">
+          <app-styled-currency [currency]="a.currency" [value]="a.ballance">
+          </app-styled-currency>
+        </div>
+
+      </ng-template>
+      <ng-template [ngIf]="!pageView">
+        <div class="ba-card-left">Context menu</div>
+        <div class="ba-card-right"><span class="mdi mdi-credit-card-outline"></span>{{a.cards.length}}</div>
+
+      </ng-template>
+    </div>
+
+  </div>
+
+</div>

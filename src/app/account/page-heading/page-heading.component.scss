@@ -1,0 +1,47 @@
+.ba-page-title {
+  color: #fff;
+}
+
+.toggle {
+  display: flex;
+  background: white;
+  width: 60px;
+  height: 30px;
+  border-radius: 28px;
+  position: relative;
+}
+
+.toggle-option {
+  width: 50%;
+  padding: 2px;
+  color: #46adc6;
+  & > span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  &.active {
+    color: #fff;
+  }
+}
+.highlighter {
+  content: "";
+  background: #46adc6;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 2px;
+  left: 32px;
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  &.left {
+    left: 2px;
+  }
+}
+
+.heading-title {
+  background: url(../../../assets/img/head-background.svg);
+}

@@ -1,0 +1,181 @@
+.list-group {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 0px #0000004a;
+  font-size: 1.6rem;
+}
+
+.header-actions {
+  display: flex;
+
+  .header-action {
+    width: 22px;
+    font-size: 22px;
+    line-height: 1;
+    margin-left: 20px;
+    color: #46adc6;
+    &:hover {
+      color: #555;
+    }
+  }
+}
+
+.list-group-header,
+.list-group-sort {
+  background: #f1f6f8;
+}
+
+.list-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.list-group-sort {
+  align-items: center;
+}
+
+.sortable {
+  padding-left: 20px;
+  //TODO use actual images here not font
+  margin-left: -5px;
+  position: relative;
+  font-size: 1.4rem;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    height: 10px;
+    font: normal normal normal 22px/10px "Material Design Icons";
+    color: #46adc6;
+
+    &:hover {
+      color: #555;
+    }
+  }
+  &:before {
+    content: "\F360";
+    top: calc(50% - 11px);
+  }
+  &:after {
+    content: "\F35D";
+    bottom: calc(50% - 11px);
+  }
+}
+
+.transaction-row {
+  display: flex;
+  padding-left: 40px;
+  border-bottom: 1px solid #f3f3f3;
+  min-height: 60px;
+
+  &.condensed {
+    background: #f3f9fa;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    &.green {
+      border-right: 5px solid #00d3b3;
+    }
+    &.red {
+      border-right: 5px solid #f17076;
+    }
+    &.yellow {
+      border-right: 5px solid #ffd133;
+    }
+
+    .right {
+      text-align: right;
+    }
+  }
+}
+
+.direction-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  *:first-child {
+    margin-bottom: 5px;
+  }
+  .highlighted {
+    color: #a7a7a7;
+    font-weight: 500;
+  }
+}
+
+.tr-column {
+  display: flex;
+  align-items: flex-start;
+  color: #a7a7a7;
+  &:not(.status) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.date {
+  width: 12%;
+}
+
+.beneficiery {
+  width: 28%;
+}
+
+.type {
+  width: 35%;
+}
+
+.currency {
+  width: 5%;
+}
+//TODO fix typo
+.ammount {
+  width: calc(25% - 20px);
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-right: 20px;
+}
+.ammount-field,
+.ammount {
+  font-size: 14px;
+}
+
+.status {
+  width: 20px;
+  color: #fff;
+  align-items: center;
+  &.green {
+    background: #00d3b3;
+  }
+  &.red {
+    background: #f17076;
+  }
+  &.yellow {
+    background: #ffd133;
+  }
+}
+
+.tr-col-1,
+.tr-col-2 {
+  width: 8%;
+}
+.tr-col-3,
+.tr-col-5 {
+  width: 20%;
+}
+.tr-col-4 {
+  width: 20%;
+}
+.tr-col-6 {
+  width: 6%;
+}
+.tr-col-7 {
+  width: calc(18% - 20px);
+  justify-content: flex-end;
+  padding-right: 20px;
+}

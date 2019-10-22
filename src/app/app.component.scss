@@ -1,0 +1,13 @@
+.main-content {
+  background: #e5f4f8;
+  margin-left: 0;
+  display: block;
+  transition: all 0.3s;
+}
+
+.main-content.is-open {
+  margin-left: 20%;
+}
+.page-wrapper{
+  position:relative;
+}

@@ -1,0 +1,26 @@
+//Generic Page
+.ba {
+  &-wrapper {
+    padding: 30px 20px 50px;
+    display: flex;
+    &.top-view {
+      flex-direction: column;
+    }
+  }
+  &-page-title {
+    color: #fff;
+  }
+
+  &-item {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ba {
+    &-wrapper {
+      flex-direction: column;
+      padding: 30px 10px;
+    }
+  }
+}

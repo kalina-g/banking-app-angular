@@ -1,0 +1,16 @@
+<app-page-heading (viewChanged)="onChangedView($event)"></app-page-heading>
+
+<div class="ba-wrapper" [ngClass]="pageView ? 'side-view' : 'top-view'">
+  <app-account-grid [accounts]="accounts" [pageView]="pageView"
+    [ngClass]="isSelectedAccount&&pageView ? 'col-25' : pageView ? 'col-65' : '' " (isSelected)="onSelect($event)">
+  </app-account-grid>
+
+  <app-account-detail *ngIf="isSelectedAccount" [pageView]="pageView"
+    [ngClass]="isSelectedAccount&&pageView ? 'col-75' : pageView ? 'col-35': '' ">
+  </app-account-detail>
+
+  <app-transaction *ngIf="!isSelectedAccount"
+    [ngClass]="isSelectedAccount&&pageView ? 'col-75' : pageView ? 'col-35': '' ">
+  </app-transaction>
+
+</div>

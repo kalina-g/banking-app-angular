@@ -1,0 +1,11 @@
+<div class="page-wrapper">
+    <app-header (toggle)="toggleSideBar()"></app-header>
+
+    <div class="page-container">
+        <app-sidenav [isOpen]="sideBarIsOpened"></app-sidenav>
+        <div class="main-content" [ngClass]="{'is-open': sideBarIsOpened}">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

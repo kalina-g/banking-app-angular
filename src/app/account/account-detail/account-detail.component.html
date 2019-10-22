@@ -1,0 +1,104 @@
+<div *ngIf="account">
+  <div class="details-wrapper list-group">
+
+    <div class="list-group-header">
+      <h4>Детайли</h4>
+      <div class="header-actions">
+        <div class="header-action detail-expand">
+          <span class="mdi mdi-chevron-down"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-details-wrapper">
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-credit-card-outline"></span>
+            Име на сметката
+          </div>
+          <div class="action">
+            <a><span class="mdi mdi-credit-card-plus-outline"></span></a>
+          </div>
+        </div>
+        <div class="right">
+          {{account.title}}
+        </div>
+      </div>
+
+
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-cart-arrow-down"></span>
+            Овърдрафт
+          </div>
+        </div>
+        <div class="right">
+          <a href="#">Заяви сега</a>
+        </div>
+      </div>
+
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-wallet"></span>
+            Баланс
+          </div>
+
+          <div class="action">
+            <a><span class="mdi mdi-calendar"></span></a>
+          </div>
+        </div>
+        <div class="right">
+
+          <app-styled-currency [currency]="account.currency" [value]="account.ballance">
+          </app-styled-currency>
+
+        </div>
+      </div>
+
+
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-clipboard-outline"></span>
+            Вид на сметката
+          </div>
+        </div>
+        <div class="right">
+          {{account.account_type}}
+        </div>
+      </div>
+
+
+
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-account"></span>
+            Титуляр
+          </div>
+        </div>
+        <div class="right">
+          {{account.account_owner}}
+        </div>
+      </div>
+
+      <div class="details-row">
+        <div class="left">
+          <div class="label">
+            <span class="mdi mdi-calendar-check"></span>
+            Дата на създаване
+          </div>
+        </div>
+        <div class="right">
+          {{account.date_created}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<app-transaction></app-transaction>
