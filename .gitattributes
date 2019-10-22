@@ -1,2 +1,3 @@
+*.css linguist-vendored
 *.ts linguist-detectable = true
 *.css linguis-detectable = false
